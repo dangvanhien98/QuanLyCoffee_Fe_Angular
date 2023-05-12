@@ -1,0 +1,84 @@
+.header {
+    width: 100%;
+    background-color: #4bc6f2;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn-search {
+    width: 70%;
+    display: flex;
+}
+
+.header-left {
+    width: 30%;
+}
+
+.search-input {
+    margin: auto;
+    width: 70%;
+}
+
+.group-icon {
+    margin: auto 0;
+    width: 30%;
+
+}
+
+.group-icon {
+    display: flex;
+    justify-content: end;
+
+}
+
+.group-icon div button {
+    background-color: #4bc6f2;
+    border: none;
+    cursor: pointer;
+}
+
+.tooltip {
+    margin: auto 10px;
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tooltip span {
+    top: 2px;
+    right: 20px;
+    margin: auto;
+    padding: auto;
+    position: 0;
+}
+
+.tooltip .reload,
+.tooltip .print,
+.tooltip .user {
+    visibility: hidden;
+
+    color: #000000;
+
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .reload {
+
+    visibility: visible;
+}
+
+.tooltip:hover .print {
+
+    visibility: visible;
+}
+
+.tooltip:hover .user {
+
+    visibility: visible;
+}

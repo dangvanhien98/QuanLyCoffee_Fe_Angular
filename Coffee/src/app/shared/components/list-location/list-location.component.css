@@ -1,0 +1,9 @@
+.lst-location {
+    width: 100%;
+    display: flex;
+}
+
+.location {
+    width: 10%;
+    margin: 5px;
+}

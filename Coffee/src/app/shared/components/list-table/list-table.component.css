@@ -1,0 +1,11 @@
+.lst-table {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.table {
+    width: 30%;
+    margin-bottom: 10px;
+}

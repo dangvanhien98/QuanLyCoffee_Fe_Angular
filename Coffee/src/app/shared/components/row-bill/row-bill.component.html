@@ -1,0 +1,32 @@
+<div class="row-bill">
+  <div class="row">
+    <tr>
+      <td>
+        <button (click)="delete(bill?.productId)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+      <td class="name-product">
+        <input type="text" [value]="bill?.product?.productName" disabled />
+      </td>
+      <td class="price">
+        <input type="number" [value]="bill?.product?.price" disabled />
+      </td>
+      <td class="quantity">
+        <button (click)="minus(bill?.productId)">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <input type="number" [value]="bill?.quantity" />
+        <button (click)="plus(bill?.productId)">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </td>
+      <td class="amount">
+        <input
+          type="text"
+          [value]="amount(bill?.product?.price, bill?.quantity)"
+        />
+      </td>
+    </tr>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="table">
+  <img src="./././../../../../assets/images/table1.png" alt="" />
+  <button
+    [style.backgroundColor]="
+      active == true
+        ? styleTable.backGoundColorActive
+        : styleTable.backGoundColor
+    "
+    (click)="onClickTable(table.tableId)"
+  >
+    {{ table.tableName }}
+  </button>
+</div>

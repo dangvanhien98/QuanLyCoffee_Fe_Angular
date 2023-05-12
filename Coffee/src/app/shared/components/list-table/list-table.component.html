@@ -1,0 +1,12 @@
+<div class="lst-table">
+  <ng-container *ngFor="let item of lstTable">
+    <div class="table">
+      <app-table
+        [table]="item"
+        [active]="item.active"
+        (onLickTable)="clickTable(item.tableId)"
+        (tableName)="getTableName(item.tableName)"
+      ></app-table>
+    </div>
+  </ng-container>
+</div>

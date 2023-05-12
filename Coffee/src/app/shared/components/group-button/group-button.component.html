@@ -1,0 +1,22 @@
+<div class="group-button">
+  <button
+    [style.backgroundColor]="buttonTable.backGoundColor"
+    class="btn-table"
+    (click)="activeTable()"
+  >
+    <div>
+      <img src="{{ buttonTable.icon }}" width="20px" />
+      <p href="">{{ buttonTable.text }}</p>
+    </div>
+  </button>
+  <button
+    [style.backgroundColor]="buttonMenu.backGoundColor"
+    class="btn-menu"
+    (click)="activeMenu()"
+  >
+    <div>
+      <img src="{{ buttonMenu.icon }}" width="20px" />
+      <p href="">{{ buttonMenu.text }}</p>
+    </div>
+  </button>
+</div>

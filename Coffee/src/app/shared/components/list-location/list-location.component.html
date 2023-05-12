@@ -1,0 +1,11 @@
+<div class="lst-location">
+  <ng-container *ngFor="let item of lstLocation">
+    <div class="location">
+      <app-button
+        [active]="item.status"
+        [location]="item"
+        (locationId)="onClickLocation(item.locationId)"
+      ></app-button>
+    </div>
+  </ng-container>
+</div>

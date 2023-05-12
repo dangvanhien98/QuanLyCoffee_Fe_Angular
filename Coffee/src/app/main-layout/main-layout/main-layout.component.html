@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <app-header (eventClick)="eventClick($event)"></app-header>
+      </div>
+      <div class="main">
+        <div class="main-left-table" [style.display]="displayTable">
+          <div class="location">
+            <app-list-location
+              [lstLocation]="locations"
+              (idLocation)="getIdLocation($event)"
+            ></app-list-location>
+          </div>
+          <div class="lst-table">
+            <app-list-table
+              [lstTable]="tables"
+              (tableName)="getTableName($event)"
+              (idTable)="getIdTable($event)"
+            ></app-list-table>
+          </div>
+        </div>
+        <div class="main-left-menu" [style.display]="displayMenu">
+          <div class="select-search">
+            <div class="title">
+              <h1>Toàn Bộ Hàng Hóa</h1>
+            </div>
+            <div class="search">
+              <app-select-search [categories]="categories"></app-select-search>
+            </div>
+          </div>
+          <div class="lst-product">
+            <app-list-product
+              (addProductClick)="addProduct($event)"
+              [lstProduct]="products"
+            ></app-list-product>
+          </div>
+        </div>
+        <div class="main-right">
+          <div class="info">
+            <p>Hóa đơn:&nbsp;{{ tableName }}</p>
+          </div>
+          <div class="bill">
+            <div class="date">
+              <p><u> Checkin:</u>&nbsp;{{ bills?.dateIn }}</p>
+              <p><u> Checkout:</u>&nbsp;{{ bills?.dateOut }}</p>
+              <!-- <app-date></app-date> -->
+            </div>
+            <div class="lst-bill">
+              <app-bill [lstBill]="detailBill"></app-bill>
+            </div>
+          </div>
+          <div class="amount">
+            <div class="btn-pay">
+              <button>Yêu cầu thanh toán</button>
+            </div>
+            <div class="info-pay">
+              <div class="discount">
+                <a>Discount(%):&nbsp;</a>
+                <input type="number" />
+              </div>
+              <div class="pay">
+                <a> Tổng tiền(VND):&nbsp;</a>
+                <input type="number" disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <app-list-product></app-list-product>
+    <app-select-search></app-select-search> -->
+    <!-- <app-row-bill></app-row-bill> -->
+  </body>
+</html>

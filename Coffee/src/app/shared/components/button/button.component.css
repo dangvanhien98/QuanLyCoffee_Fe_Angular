@@ -1,0 +1,16 @@
+.location {
+    width: 100%;
+}
+
+.location button {
+    width: 100%;
+
+    border: 1px solid #e0e0e0;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.location button:hover {
+    background-color: #e0e0e0 !important;
+}

@@ -1,0 +1,12 @@
+<div class="location">
+  <button
+    [style.backgroundColor]="
+      active === true
+        ? styleButton.backGoundColorActive
+        : styleButton.backGoundColor
+    "
+    (click)="onClickLocation(location.locationId)"
+  >
+    {{ location.locationName }}
+  </button>
+</div>

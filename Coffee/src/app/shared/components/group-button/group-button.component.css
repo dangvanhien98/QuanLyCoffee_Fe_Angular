@@ -1,0 +1,25 @@
+.group-button {
+    width: 100%;
+    display: flex;
+}
+
+.group-button button {
+    width: 50%;
+    border: none;
+}
+
+.group-button button div {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.group-button button div p {
+    margin: auto;
+}
+
+.group-button button div img {
+    margin: auto;
+    display: flex;
+
+}

@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="btn-search">
+    <div class="header-left">
+      <app-group-button
+        [buttonTable]="buttonTable"
+        [buttonMenu]="buttonMenu"
+        (btnClick)="btnClick($event)"
+      ></app-group-button>
+    </div>
+    <div class="search-input">
+      <app-search></app-search>
+    </div>
+  </div>
+  <div class="group-icon">
+    <div class="tooltip">
+      <button class="btn-reload">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+      <span class="reload">Reload</span>
+    </div>
+    <div class="tooltip">
+      <button><i class="fa-solid fa-print"></i></button>
+      <span class="print">print</span>
+    </div>
+    <div class="tooltip">
+      <button><i class="fa-solid fa-bars"></i></button>
+      <span class="user">Đặng Văn Hiền</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="select-search">
+  <div class="input-search">
+    <input
+      (click)="onCLickSearch()"
+      (keyup)="onKeyDown()"
+      type="text"
+      placeholder="select - search"
+      [value]="textSearch"
+      [(ngModel)]="textSearch"
+    />
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="list-category" [style.display]="displayOption">
+    <ng-container *ngFor="let item of categoriesFilter">
+      <option
+        (click)="[onOpition(item.categoryName), getIdCategory(item.categoryId)]"
+        [value]="item.categoryId"
+      >
+        {{ item.categoryName }}
+      </option>
+    </ng-container>
+  </div>
+</div>

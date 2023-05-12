@@ -1,0 +1,10 @@
+<div class="lst-product">
+  <ng-container *ngFor="let item of lstProduct">
+    <div class="item-product">
+      <app-product-item
+        (productClick)="productClick(item.productId)"
+        [product]="item"
+      ></app-product-item>
+    </div>
+  </ng-container>
+</div>
